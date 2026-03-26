@@ -40,11 +40,6 @@
     "link": "https://www.google.com/about/careers/applications/jobs/results/139401797503460038-software-engineer-generative-ai-application-and-tooling"
   },
   {
-    "id": "https://www.google.com/about/careers/applications/jobs/results/123741202670330566-software-engineer-embedded-systems-platform-software",
-    "title": "Software Engineer, Embedded Systems, Platform Software",
-    "link": "https://www.google.com/about/careers/applications/jobs/results/123741202670330566-software-engineer-embedded-systems-platform-software"
-  },
-  {
     "id": "https://www.google.com/about/careers/applications/jobs/results/79764942332273350-software-engineer-platforms-infrastructure-engineering-release-engineering",
     "title": "Software Engineer, Platforms Infrastructure Engineering Release Engineering",
     "link": "https://www.google.com/about/careers/applications/jobs/results/79764942332273350-software-engineer-platforms-infrastructure-engineering-release-engineering"
@@ -68,5 +63,10 @@
     "id": "https://www.google.com/about/careers/applications/jobs/results/139817739853144774-software-engineer-iii-google-system",
     "title": "Software Engineer III, Google System",
     "link": "https://www.google.com/about/careers/applications/jobs/results/139817739853144774-software-engineer-iii-google-system"
+  },
+  {
+    "id": "https://www.google.com/about/careers/applications/jobs/results/73212503181402822-gpu-software-engineer-embedded-system-platform",
+    "title": "GPU Software Engineer, Embedded System, Platform",
+    "link": "https://www.google.com/about/careers/applications/jobs/results/73212503181402822-gpu-software-engineer-embedded-system-platform"
   }
 ]
