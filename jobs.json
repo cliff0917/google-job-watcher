@@ -50,9 +50,29 @@
     "link": "https://www.google.com/about/careers/applications/jobs/results/110263300284916422-software-engineer-iii-integration-and-qualification-tpu-infrastructure"
   },
   {
+    "id": "https://www.google.com/about/careers/applications/jobs/results/82103646514225862-senior-software-engineer-ai-tpu-infrastructure",
+    "title": "Senior Software Engineer, AI, TPU, Infrastructure",
+    "link": "https://www.google.com/about/careers/applications/jobs/results/82103646514225862-senior-software-engineer-ai-tpu-infrastructure"
+  },
+  {
+    "id": "https://www.google.com/about/careers/applications/jobs/results/101752108281144006-senior-software-engineer-cloud-aiml-infrastructure",
+    "title": "Senior Software Engineer, Cloud AI/ML Infrastructure",
+    "link": "https://www.google.com/about/careers/applications/jobs/results/101752108281144006-senior-software-engineer-cloud-aiml-infrastructure"
+  },
+  {
+    "id": "https://www.google.com/about/careers/applications/jobs/results/76431903829172934-senior-software-engineer-system-acceleration-silicon",
+    "title": "Senior Software Engineer, System Acceleration, Silicon",
+    "link": "https://www.google.com/about/careers/applications/jobs/results/76431903829172934-senior-software-engineer-system-acceleration-silicon"
+  },
+  {
     "id": "https://www.google.com/about/careers/applications/jobs/results/102184963675169478-software-engineer-iii-android-frameworks",
     "title": "Software Engineer III, Android Frameworks",
     "link": "https://www.google.com/about/careers/applications/jobs/results/102184963675169478-software-engineer-iii-android-frameworks"
+  },
+  {
+    "id": "https://www.google.com/about/careers/applications/jobs/results/72633060553564870-senior-software-engineer-storage-technologies-google-cloud-platform",
+    "title": "Senior Software Engineer, Storage Technologies, Google Cloud Platform",
+    "link": "https://www.google.com/about/careers/applications/jobs/results/72633060553564870-senior-software-engineer-storage-technologies-google-cloud-platform"
   },
   {
     "id": "https://www.google.com/about/careers/applications/jobs/results/75558513639596742-software-engineer-iii-cloud-aiml-infrastructure",
@@ -60,13 +80,33 @@
     "link": "https://www.google.com/about/careers/applications/jobs/results/75558513639596742-software-engineer-iii-cloud-aiml-infrastructure"
   },
   {
+    "id": "https://www.google.com/about/careers/applications/jobs/results/78212291790545606-senior-software-engineer-embedded-systems-cloud-platform",
+    "title": "Senior Software Engineer, Embedded Systems, Cloud Platform",
+    "link": "https://www.google.com/about/careers/applications/jobs/results/78212291790545606-senior-software-engineer-embedded-systems-cloud-platform"
+  },
+  {
     "id": "https://www.google.com/about/careers/applications/jobs/results/139817739853144774-software-engineer-iii-google-system",
     "title": "Software Engineer III, Google System",
     "link": "https://www.google.com/about/careers/applications/jobs/results/139817739853144774-software-engineer-iii-google-system"
   },
   {
+    "id": "https://www.google.com/about/careers/applications/jobs/results/131249767576412870-senior-software-engineer-system-engineering-google-cloud-platforms",
+    "title": "Senior Software Engineer, System Engineering, Google Cloud Platforms",
+    "link": "https://www.google.com/about/careers/applications/jobs/results/131249767576412870-senior-software-engineer-system-engineering-google-cloud-platforms"
+  },
+  {
     "id": "https://www.google.com/about/careers/applications/jobs/results/73212503181402822-gpu-software-engineer-embedded-system-platform",
     "title": "GPU Software Engineer, Embedded System, Platform",
     "link": "https://www.google.com/about/careers/applications/jobs/results/73212503181402822-gpu-software-engineer-embedded-system-platform"
+  },
+  {
+    "id": "https://www.google.com/about/careers/applications/jobs/results/130512288405693126-software-engineer-iii-tpu-supercomputer-cloud-platforms",
+    "title": "Software Engineer III, TPU Supercomputer, Cloud Platforms",
+    "link": "https://www.google.com/about/careers/applications/jobs/results/130512288405693126-software-engineer-iii-tpu-supercomputer-cloud-platforms"
+  },
+  {
+    "id": "https://www.google.com/about/careers/applications/jobs/results/140325423241142982-embedded-software-engineer-pixel-hearables",
+    "title": "Embedded Software Engineer, Pixel Hearables",
+    "link": "https://www.google.com/about/careers/applications/jobs/results/140325423241142982-embedded-software-engineer-pixel-hearables"
   }
 ]
