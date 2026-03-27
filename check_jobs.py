@@ -46,70 +46,94 @@ def normalize_job(job):
 
 def fetch_jobs():
     jobs = []
-    seen = set()
+    seen_ids = set()
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         context = browser.new_context()
-        page = context.new_page()
 
-        page.goto(JOBS_URL, wait_until="networkidle", timeout=60000)
-        page.wait_for_timeout(3000)
+        page_num = 1
 
-        headings = page.locator("h3")
-        count = headings.count()
-        print(f"Found {count} h3 headings")
+        while True:
+            page = context.new_page()
 
-        for i in range(count):
-            heading = headings.nth(i)
+            paged_url = f"{JOBS_URL}&page={page_num}"
+            print(f"Fetching page {page_num}: {paged_url}")
 
-            try:
-                title = heading.inner_text(timeout=3000).strip()
-            except Exception:
-                continue
+            page.goto(paged_url, wait_until="networkidle", timeout=60000)
+            page.wait_for_timeout(3000)
 
-            if "Software Engineer" not in title:
-                continue
-            if "Senior" in title: # custom filter to exclude senior roles
-                continue
-            if "," not in title:
-                continue
-            if "Equal opportunity" in title:
-                continue
-            if title in seen:
-                continue
+            headings = page.locator("h3")
+            count = headings.count()
+            print(f"Found {count} h3 headings on page {page_num}")
 
-            # print(f"Trying title: {title}")
+            page_jobs = []
 
-            link = JOBS_URL
+            for i in range(count):
+                heading = headings.nth(i)
 
-            try:
-                learn_more = heading.locator("xpath=following::a[1]")
-                href = learn_more.get_attribute("href")
+                try:
+                    title = heading.inner_text(timeout=3000).strip()
+                except Exception:
+                    continue
 
-                # print("href:", href)
+                if "Software Engineer" not in title:
+                    continue
+                if "," not in title:
+                    continue
+                if "Equal opportunity" in title:
+                    continue
 
-                if href:
-                    link = urljoin(
-                        "https://www.google.com/about/careers/applications/",
-                        href,
-                    )
-                    link = link.split("?")[0]
-
-            except Exception as e:
-                print(f"Could not resolve link for {title}: {e}")
                 link = JOBS_URL
 
-            # print("title:", title)
-            # print("link:", link)
-            # print("-" * 60)
+                try:
+                    learn_more = heading.locator("xpath=following::a[1]")
+                    href = learn_more.get_attribute("href")
 
-            jobs.append({
-                "id": link if link != JOBS_URL else title,
-                "title": title,
-                "link": link,
-            })
-            seen.add(title)
+                    if href:
+                        link = urljoin(
+                            "https://www.google.com/about/careers/applications/",
+                            href,
+                        ).split("?")[0]
+
+                except Exception as e:
+                    print(f"Could not resolve link for {title}: {e}")
+                    link = JOBS_URL
+
+                job_id = link if link != JOBS_URL else f"{title}__page{page_num}"
+
+                if job_id in seen_ids:
+                    continue
+
+                seen_ids.add(job_id)
+
+                job = {
+                    "id": job_id,
+                    "title": title,
+                    "link": link,
+                }
+
+                page_jobs.append(job)
+
+                # print("title:", title)
+                # print("link:", link)
+                # print("-" * 60)
+
+            page.close()
+
+            # 這一頁完全沒抓到職缺，代表後面沒了
+            if not page_jobs:
+                print(f"No jobs found on page {page_num}, stop pagination.")
+                break
+
+            jobs.extend(page_jobs)
+
+            # 若這頁少於 20 筆，通常就是最後一頁
+            if len(page_jobs) < 20:
+                print(f"Page {page_num} has only {len(page_jobs)} jobs, likely last page.")
+                break
+
+            page_num += 1
 
         browser.close()
 
