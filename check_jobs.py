@@ -268,13 +268,12 @@ def build_job_message(job):
         min_part = translated.replace("[[MIN]]", "").strip() or "無"
 
     msg = (
-        "--------------------------------\n"
         "🚨 Google 新職缺\n\n"
         f"[{title}]({link})\n\n"
         "基本資格：\n"
         f"{min_part}\n\n"
         "加分條件：\n"
-        f"{pref_part}\n\n"
+        f"{pref_part}\n"
         "--------------------------------\n"
     )
 
